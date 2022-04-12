@@ -5,12 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
 
     <EditText
-        android:layout_width="70dp"
+        android:id="@+id/edit_1"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:hint="@string/edithint"/>
+        android:hint="@string/edithint"
+        android:layout_marginBottom="20dp"
+        android:inputType="number"/>
 
+    <EditText
+        android:id="@+id/edit_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edithint"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btn_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:text="@string/btn_plus"/>
+
+    <Button
+        android:id="@+id/btn_minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:text="@string/btn_minus"/>
+
+    <Button
+        android:id="@+id/btn_multi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:text="@string/btn_multi"/>
+
+    <Button
+        android:id="@+id/btn_divide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:text="@string/btn_divide"/>
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9999ff"
+        android:text="@string/text_result"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:gravity="bottom"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
