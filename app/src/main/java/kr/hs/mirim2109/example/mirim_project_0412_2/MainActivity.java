@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             if(edit1Str.equals("")||edit2Str.equals("")) {
                 Toast.makeText(getApplicationContext(),
                         "연산에 필요한 숫자가 입려되지 않았습니다.",
-                        Toast.LENGTH_LONG);
+                        Toast.LENGTH_LONG).show();
                 return;
             }
             double num1 = Double.parseDouble(edit1Str);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     if(num2==0) {
                         Toast.makeText(getApplicationContext(),
                                 "나누는 수는 0이면 안됩니다.",
-                                Toast.LENGTH_LONG);
+                                Toast.LENGTH_LONG).show();
                         return;
                     }
                     result = num1 / num2;
