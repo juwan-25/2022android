@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 //        Button btnMulti = findViewById(R.id.btn_multi);
 //        Button btnDivide = findViewById(R.id.btn_divide);
 
-        int[] btn_id = {R.id.btn_plus, R.id.btn_minus, R.id.btn_multi, R.id.btn_divide};
+        int[] btn_id = {R.id.btn_plus, R.id.btn_minus, R.id.btn_multi, R.id.btn_divide, R.id.btn_mod};
         Button[] btn = new Button[btn_id.length];
         for(int i=0; i< btn.length; i++) {
             btn[i] = findViewById(btn_id[i]);
@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_divide:
                     result = num1 / num2;
+                    break;
+                case R.id.btn_mod:
+                    result = num1 % num2;
                     break;
             }
             textResult.setText(R.string.text_result);
