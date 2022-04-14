@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,9 +42,15 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             String edit1Str = edit1.getText().toString();
             String edit2Str = edit2.getText().toString();
-            int num1 = Integer.parseInt(edit1Str);
-            int num2 = Integer.parseInt(edit1Str);
-            int result = 0;
+            if(edit1Str.equals("")||edit2Str.equals("")) {
+                Toast.makeText(getApplicationContext(),
+                        "연산에 필요한 숫자가 입려되지 않았습니다.",
+                        Toast.LENGTH_LONG);
+                return;
+            }
+            double num1 = Double.parseDouble(edit1Str);
+            double num2 = Double.parseDouble(edit2Str);
+            double result = 0;
             switch (view.getId()) {
                 case R.id.btn_plus :
                     result = num1 + num2;
@@ -63,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             }
             textResult.setText(R.string.text_result);
             textResult.append(" "+result);
+
+
         }
     };
 }
