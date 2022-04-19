@@ -28,8 +28,16 @@ public class MainActivity extends AppCompatActivity {
         switchStart = findViewById(R.id.swtich_start);
         imgv = findViewById(R.id.imgv);
         switchStart.setOnCheckedChangeListener(switchListener);
+        Button btnFinish = findViewById(R.id.btn_finish);
+        btnFinish.setOnClickListener(btnListener);
 
     }
+    View.OnClickListener btnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            finish();
+        }
+    };
 
     RadioGroup.OnCheckedChangeListener rgListener = new RadioGroup.OnCheckedChangeListener() {
         @Override
