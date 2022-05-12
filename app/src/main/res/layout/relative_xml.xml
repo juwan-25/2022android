@@ -27,13 +27,17 @@
         android:layout_below="@id/base_text"
         android:layout_toLeftOf="@id/base_btn_2"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#0f4c81"/>
     <Button
+
         android:id="@+id/base_btn_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="취소"
         android:layout_below="@id/base_text"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#0f4c81"/>
+
 </RelativeLayout>
