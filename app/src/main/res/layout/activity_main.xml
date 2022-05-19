@@ -12,34 +12,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp">
 
         <Button
-            android:id="@+id/btn_yellow"
+            android:id="@+id/btn_ty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yellow"
+            android:text="taeyong"
             android:layout_marginRight="5dp"
-            android:backgroundTint="#ffff00"
+            android:backgroundTint="#ff6f61"
             android:textColor="#000"/>
 
         <Button
-            android:id="@+id/btn_green"
+            android:id="@+id/btn_rj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#bfff00"
-            android:text="Green"
+            android:backgroundTint="#ffff00"
+            android:text="renjun"
             android:textColor="#000"
             android:layout_marginRight="5dp"/>
 
         <Button
-            android:id="@+id/btn_blue"
+            android:id="@+id/btn_win"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:textColor="#000"
             android:backgroundTint="#4aa8d8"
-            android:text="Blue"/>
+            android:text="winwin"/>
 
     </LinearLayout>
 
@@ -48,28 +49,63 @@
         android:layout_height="match_parent"
         android:background="@color/black">
         <LinearLayout
-            android:id="@+id/linear_yellow"
+            android:id="@+id/linear_ty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:gravity="center"
+            android:background="#ff6f61">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:background="@drawable/taeyong"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:text="Taeyong"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_rj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
             android:background="#ffff00">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:background="@drawable/renjun"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:text="Renjun"/>
 
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/linear_green"
+            android:id="@+id/linear_win"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="#bfff00">
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linear_blue"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:gravity="center"
             android:background="#4aa8d8">
-
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:background="@drawable/winwin"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:text="Winwin"/>
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>
