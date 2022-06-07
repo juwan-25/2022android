@@ -36,13 +36,10 @@ public class MainActivity extends AppCompatActivity {
         date = findViewById(R.id.date);
         text_result = findViewById(R.id.text_result);
 
-        Button btnStart = findViewById(R.id.btn_start);
-        Button btnDone =findViewById(R.id.btn_done) ;
-
-        btnStart.setOnClickListener(btnListener);
-        btnDone.setOnClickListener(btnListener);
         rg.setOnCheckedChangeListener(rgListener);
 
+        timer.setOnClickListener(timerListener);
+        text_result.setOnLongClickListener(textListener);
         date.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker datePicker, int year, int month, int day) {
@@ -71,22 +68,24 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    View.OnClickListener btnListener = new View.OnClickListener() {
+    View.OnClickListener timerListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            switch(view.getId()){
-                case R.id.btn_start:
-                    timer.setBase(SystemClock.elapsedRealtime());
-                    timer.start();
-                    timer.setTextColor(Color.RED);
-                    break;
-                case R.id.btn_done:
-                    timer.stop();
-                    timer.setTextColor(Color.BLUE);
-                    text_result.setText(selectedYear+"년 "+selectedMonth+"월 "+selectedDay+"일 ");
-                    text_result.append(time.getCurrentHour()+"시 "+time.getCurrentMinute()+"분 예약 완료됨");
-                    break;
-            }
+            timer.setBase(SystemClock.elapsedRealtime());
+            timer.start();
+            timer.setTextColor(Color.RED);
         }
     };
+
+    View.OnLongClickListener textListener = new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View view) {
+            timer.stop();
+            timer.setTextColor(Color.BLUE);
+            text_result.setText(selectedYear+"년 "+selectedMonth+"월 "+selectedDay+"일 ");
+            text_result.append(time.getCurrentHour()+"시 "+time.getCurrentMinute()+"분 예약 완료됨");
+            return true;
+        }
+    };
+
 }
