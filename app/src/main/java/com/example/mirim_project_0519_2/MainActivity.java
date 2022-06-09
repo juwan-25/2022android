@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
         rg.setOnCheckedChangeListener(rgListener);
 
+        time.setVisibility(View.INVISIBLE);
+        date.setVisibility(View.INVISIBLE);
+        rg.setVisibility(View.INVISIBLE);
+
         timer.setOnClickListener(timerListener);
         text_result.setOnLongClickListener(textListener);
         date.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
@@ -48,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 selectedDay = day;
             }
         });
-        time.setVisibility(View.INVISIBLE);
-        date.setVisibility(View.INVISIBLE);
+
     }
 
     RadioGroup.OnCheckedChangeListener rgListener = new RadioGroup.OnCheckedChangeListener() {
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener timerListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            rg.setVisibility(View.VISIBLE);
             timer.setBase(SystemClock.elapsedRealtime());
             timer.start();
             timer.setTextColor(Color.RED);
