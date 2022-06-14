@@ -27,10 +27,11 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.btn_prev:
-                    vFlip.showPrevious();
+                    vFlip.startFlipping();
+                    vFlip.setFlipInterval(1000);
                     break;
                 case R.id.btn_next:
-                    vFlip.showNext();
+                    vFlip.stopFlipping();
                     break;
             }
 
