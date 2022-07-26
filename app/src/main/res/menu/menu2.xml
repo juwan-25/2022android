@@ -7,4 +7,10 @@
     <item
         android:id="@+id/item_zoom"
         android:title="버튼확대"/>
+
+    <item
+        android:id="@+id/item_return"
+        android:title="원래대로"/>
+
+
 </menu>

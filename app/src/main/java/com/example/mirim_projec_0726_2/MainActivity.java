@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.Gravity;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout linear;
@@ -25,7 +27,18 @@ public class MainActivity extends AppCompatActivity {
         btn2 = findViewById(R.id.btn_btn);
         registerForContextMenu(btn1);
         registerForContextMenu(btn2);
+        Button btn3 = findViewById(R.id.btn_toast);
+        btn3.setOnClickListener(toastListener);
     }
+
+    View.OnClickListener toastListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Toast t = Toast.makeText(MainActivity.this, "토스트위치변경연습", Toast.LENGTH_SHORT);
+            t.setGravity(Gravity.CENTER,0,0);
+            t.show();
+        }
+    };
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -63,7 +76,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_zoom:
                 btn2.setScaleX(2);
                 return true;
+            case R.id.item_return:
+                btn2.setRotation(1);
+                btn2.setScaleX(1);
+                return true;
+
         }
+
         return false;
     }
 }
