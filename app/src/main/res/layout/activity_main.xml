@@ -14,8 +14,9 @@
         android:text="옵션메뉴를 선택해 보아요"/>
 
     <Button
-        android:id="@+id/btn_"
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="버튼의 회전과 크기"/>
 
 </LinearLayout>
