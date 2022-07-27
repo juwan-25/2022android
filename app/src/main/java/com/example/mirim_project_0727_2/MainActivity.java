@@ -12,7 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    TextView textName, textEmail, toastText;
+    EditText editName, editEmail;
+    TextView toastText;
     EditText dlgEditName, dlgEditEmail;
     View dlgView, toastView;
 
@@ -21,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textName = findViewById(R.id.text_name);
-        textEmail = findViewById(R.id.text_email);
+        editName = findViewById(R.id.edit_name);
+        editEmail = findViewById(R.id.edit_email);
 
         Button btnInput = findViewById(R.id.btn_input);
         btnInput.setOnClickListener(btnInputListener);
@@ -41,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dlgEditName = dlgView.findViewById(R.id.edit_name);
                     dlgEditEmail = dlgView.findViewById(R.id.edit_email);
-                    textName.setText(dlgEditName.getText().toString());
-                    textEmail.setText(dlgEditEmail.getText().toString());
+                    editName.setText(dlgEditName.getText().toString());
+                    editEmail.setText(dlgEditEmail.getText().toString());
                 }
             });
 
