@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
-    android:background="#FEFFD1"
+    android:background="#D1E0FF"
     android:gravity="center_horizontal"
     tools:context=".MainActivity2">
 
@@ -14,22 +14,13 @@
         android:id="@+id/btn_prev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFBB00"
-        android:textColor="@color/black"
+        android:backgroundTint="#0365CF"
         android:text="이전으로"/>
 
-    <TextView
-        android:id="@+id/text_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="앨빈과 슈퍼밴드"/>
-
     <ImageView
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/agi"/>
+        android:src="@drawable/agi3"/>
 
 </LinearLayout>
