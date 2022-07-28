@@ -16,6 +16,7 @@
       android:text="BMI 정보 입력"
       android:gravity="center"
       android:textStyle="bold"
+        android:textColor="#000"
       android:layout_marginTop="20dp"
       android:textSize="20dp" />
 
@@ -44,7 +45,8 @@
             android:layout_height="wrap_content"
             android:text="체종 : "/>
         <EditText
-            android:id="@+id/edit_weight"
+            android:id="@+id/edit_wei"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -59,16 +61,18 @@
             android:layout_height="wrap_content"
             android:text="신장 : "/>
         <EditText
-            android:id="@+id/edit_height"
+            android:id="@+id/edit_hei"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <Button
+        android:id="@+id/btn_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:backgroundTint="#010678"
-        android:text="결과화면 "/>
+        android:text="결과화면"/>
 
 
   </LinearLayout>
