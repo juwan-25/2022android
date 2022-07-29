@@ -9,7 +9,35 @@
     android:padding="20dp"
     tools:context=".ResultActivity">
     <TableRow
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:id="@+id/text_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="최다 득표 사진"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_span="2"
+            android:layout_gravity="center"/>
+    </TableRow>
+    <TableRow
         android:layout_marginBottom="15dp">
+        <ImageView
+            android:id="@+id/img_top"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_span="2"
+            android:layout_gravity="center"
+            android:src="@drawable/mark"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="5dp">
+
+    </TableRow>
+    <TableRow
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text01"
             android:layout_width="match_parent"
@@ -21,11 +49,11 @@
             android:id="@+id/rating01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text02"
             android:layout_width="match_parent"
@@ -37,11 +65,11 @@
             android:id="@+id/rating02"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text03"
             android:layout_width="match_parent"
@@ -53,11 +81,11 @@
             android:id="@+id/rating03"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text04"
             android:layout_width="match_parent"
@@ -69,11 +97,11 @@
             android:id="@+id/rating04"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text05"
             android:layout_width="match_parent"
@@ -85,11 +113,11 @@
             android:id="@+id/rating05"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text06"
             android:layout_width="match_parent"
@@ -101,11 +129,11 @@
             android:id="@+id/rating06"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text07"
             android:layout_width="match_parent"
@@ -117,11 +145,11 @@
             android:id="@+id/rating07"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text08"
             android:layout_width="match_parent"
@@ -133,11 +161,11 @@
             android:id="@+id/rating08"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:id="@+id/text09"
             android:layout_width="match_parent"
@@ -149,16 +177,17 @@
             android:id="@+id/rating09"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="?android:attr/ratingBarStyleIndicator"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_gravity="right"/>
     </TableRow>
     <TableRow
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp">
         <Button
             android:id="@+id/btn_home"
             android:layout_span="2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4D4D4D"
             android:text="돌아가기"/>
     </TableRow>
 </TableLayout>
