@@ -1,7 +1,10 @@
 package com.example.mirim_project_0801_4;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,9 +34,17 @@ public class MainActivity extends AppCompatActivity {
         listv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                items.remove(i);
-                adapter.notifyDataSetChanged();
-                edit1.setText("");
+                AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.this);
+                dlg.setTitle("삭제하시겠습니까?");
+                dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int j) {
+                        items.remove(i);
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+                dlg.setNegativeButton("취소", null);
+                dlg.show();
                 return false;
             }
         });
