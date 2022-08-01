@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 items.remove(i);
                 adapter.notifyDataSetChanged();
+                edit1.setText("");
                 return false;
             }
         });
