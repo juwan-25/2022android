@@ -48,23 +48,33 @@
         <Button
             android:id="@+id/btn_init"
             android:backgroundTint="#3F51B5"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:text="초기화"/>
         <Button
             android:id="@+id/btn_insert"
             android:backgroundTint="#3F51B5"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:text="입력"/>
+        <Button
+            android:id="@+id/btn_update"
+            android:backgroundTint="#3F51B5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="수정"/>
+        <Button
+            android:id="@+id/btn_delete"
+            android:backgroundTint="#3F51B5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="삭제"/>
         <Button
             android:id="@+id/btn_select"
             android:backgroundTint="#3F51B5"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+
             android:text="조회"/>
 
     </LinearLayout>

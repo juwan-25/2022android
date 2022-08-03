@@ -17,7 +17,7 @@ import java.sql.SQLClientInfoException;
 public class MainActivity extends AppCompatActivity {
     DBHelper dbHelper;
     EditText editName, editMember, editResultName, editResultMember;
-
+    Button btnSelect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +25,15 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnInit = findViewById(R.id.btn_init);
         Button btnInsert = findViewById(R.id.btn_insert);
-        Button btnSelect = findViewById(R.id.btn_select);
+        btnSelect = findViewById(R.id.btn_select);
+        Button btnUpdate = findViewById(R.id.btn_update);
+        Button btnDelete = findViewById(R.id.btn_delete);
+
         btnInit.setOnClickListener(btnListener);
         btnSelect.setOnClickListener(btnListener);
         btnInsert.setOnClickListener(btnListener);
+        btnUpdate.setOnClickListener(btnListener);
+        btnDelete.setOnClickListener(btnListener);
 
         editName = findViewById(R.id.edit_name);
         editMember = findViewById(R.id.edit_member);
@@ -72,6 +77,22 @@ public class MainActivity extends AppCompatActivity {
                     editResultMember.setText(strMember);
 
                     c.close();
+                    db.close();
+                    break;
+                case R.id.btn_update:
+                    db = dbHelper.getWritableDatabase();
+                    db.execSQL("UPDATE idolTbl SET cnt = "+editMember.getText().toString() +" where name = '"+editName.getText().toString()+"';");
+                    editName.setText("");
+                    editMember.setText("");
+                    btnSelect.callOnClick();
+                    db.close();
+                    break;
+                case R.id.btn_delete:
+                    db = dbHelper.getWritableDatabase();
+                    db.execSQL("DELETE FROM idolTbl WHERE name = '"+editName.getText().toString()+"';");
+                    editName.setText("");
+                    editMember.setText("");
+                    btnSelect.callOnClick();
                     db.close();
                     break;
             }
