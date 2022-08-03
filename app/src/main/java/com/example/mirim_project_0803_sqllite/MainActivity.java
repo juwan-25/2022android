@@ -1,8 +1,11 @@
 package com.example.mirim_project_0803_sqllite;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -88,12 +91,22 @@ public class MainActivity extends AppCompatActivity {
                     db.close();
                     break;
                 case R.id.btn_delete:
-                    db = dbHelper.getWritableDatabase();
-                    db.execSQL("DELETE FROM idolTbl WHERE name = '"+editName.getText().toString()+"';");
-                    editName.setText("");
-                    editMember.setText("");
-                    btnSelect.callOnClick();
-                    db.close();
+                    AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.this);
+                    dlg.setTitle("삭제");
+                    dlg.setMessage("정말로 삭제하시겠습니까?");
+                    dlg.setPositiveButton("삭제", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            db = dbHelper.getWritableDatabase();
+                            db.execSQL("DELETE FROM idolTbl WHERE name = '"+editName.getText().toString()+"';");
+                            editName.setText("");
+                            editMember.setText("");
+                            btnSelect.callOnClick();
+                            db.close();
+
+                        }
+                    });
+                    dlg.show();
                     break;
             }
         }
