@@ -46,21 +46,21 @@
         android:gravity="center"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btn_reset"
+            android:id="@+id/btn_init"
             android:backgroundTint="#3F51B5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="초기화"/>
         <Button
-            android:id="@+id/btn_in"
+            android:id="@+id/btn_insert"
             android:backgroundTint="#3F51B5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="입력"/>
         <Button
-            android:id="@+id/btn_search"
+            android:id="@+id/btn_select"
             android:backgroundTint="#3F51B5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -73,11 +73,13 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
         <EditText
+            android:id="@+id/edit_result_name"
             android:background="#C4D3F1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
         <EditText
+            android:id="@+id/edit_result_member"
             android:background="#D5C9EE"
             android:layout_width="0dp"
             android:layout_height="match_parent"
